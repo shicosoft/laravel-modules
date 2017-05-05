@@ -1,6 +1,6 @@
 <?php
 
-namespace Nwidart\Modules;
+namespace Koyeo\Modules;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Foundation\Application;

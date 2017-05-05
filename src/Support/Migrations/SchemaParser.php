@@ -1,6 +1,6 @@
 <?php
 
-namespace Nwidart\Modules\Support\Migrations;
+namespace Koyeo\Modules\Support\Migrations;
 
 use Illuminate\Contracts\Support\Arrayable;
 

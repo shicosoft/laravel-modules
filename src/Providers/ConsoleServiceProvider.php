@@ -1,40 +1,40 @@
 <?php
 
-namespace Nwidart\Modules\Providers;
+namespace Koyeo\Modules\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Nwidart\Modules\Commands\CommandCommand;
-use Nwidart\Modules\Commands\ControllerCommand;
-use Nwidart\Modules\Commands\DisableCommand;
-use Nwidart\Modules\Commands\DumpCommand;
-use Nwidart\Modules\Commands\EnableCommand;
-use Nwidart\Modules\Commands\GenerateEventCommand;
-use Nwidart\Modules\Commands\GenerateJobCommand;
-use Nwidart\Modules\Commands\GenerateListenerCommand;
-use Nwidart\Modules\Commands\GenerateMailCommand;
-use Nwidart\Modules\Commands\GenerateMiddlewareCommand;
-use Nwidart\Modules\Commands\GenerateNotificationCommand;
-use Nwidart\Modules\Commands\GenerateProviderCommand;
-use Nwidart\Modules\Commands\GenerateRouteProviderCommand;
-use Nwidart\Modules\Commands\InstallCommand;
-use Nwidart\Modules\Commands\ListCommand;
-use Nwidart\Modules\Commands\MakeCommand;
-use Nwidart\Modules\Commands\MakeRequestCommand;
-use Nwidart\Modules\Commands\MigrateCommand;
-use Nwidart\Modules\Commands\MigrateRefreshCommand;
-use Nwidart\Modules\Commands\MigrateResetCommand;
-use Nwidart\Modules\Commands\MigrateRollbackCommand;
-use Nwidart\Modules\Commands\MigrationCommand;
-use Nwidart\Modules\Commands\ModelCommand;
-use Nwidart\Modules\Commands\PublishCommand;
-use Nwidart\Modules\Commands\PublishConfigurationCommand;
-use Nwidart\Modules\Commands\PublishMigrationCommand;
-use Nwidart\Modules\Commands\PublishTranslationCommand;
-use Nwidart\Modules\Commands\SeedCommand;
-use Nwidart\Modules\Commands\SeedMakeCommand;
-use Nwidart\Modules\Commands\SetupCommand;
-use Nwidart\Modules\Commands\UpdateCommand;
-use Nwidart\Modules\Commands\UseCommand;
+use Koyeo\Modules\Commands\CommandCommand;
+use Koyeo\Modules\Commands\ControllerCommand;
+use Koyeo\Modules\Commands\DisableCommand;
+use Koyeo\Modules\Commands\DumpCommand;
+use Koyeo\Modules\Commands\EnableCommand;
+use Koyeo\Modules\Commands\GenerateEventCommand;
+use Koyeo\Modules\Commands\GenerateJobCommand;
+use Koyeo\Modules\Commands\GenerateListenerCommand;
+use Koyeo\Modules\Commands\GenerateMailCommand;
+use Koyeo\Modules\Commands\GenerateMiddlewareCommand;
+use Koyeo\Modules\Commands\GenerateNotificationCommand;
+use Koyeo\Modules\Commands\GenerateProviderCommand;
+use Koyeo\Modules\Commands\GenerateRouteProviderCommand;
+use Koyeo\Modules\Commands\InstallCommand;
+use Koyeo\Modules\Commands\ListCommand;
+use Koyeo\Modules\Commands\MakeCommand;
+use Koyeo\Modules\Commands\MakeRequestCommand;
+use Koyeo\Modules\Commands\MigrateCommand;
+use Koyeo\Modules\Commands\MigrateRefreshCommand;
+use Koyeo\Modules\Commands\MigrateResetCommand;
+use Koyeo\Modules\Commands\MigrateRollbackCommand;
+use Koyeo\Modules\Commands\MigrationCommand;
+use Koyeo\Modules\Commands\ModelCommand;
+use Koyeo\Modules\Commands\PublishCommand;
+use Koyeo\Modules\Commands\PublishConfigurationCommand;
+use Koyeo\Modules\Commands\PublishMigrationCommand;
+use Koyeo\Modules\Commands\PublishTranslationCommand;
+use Koyeo\Modules\Commands\SeedCommand;
+use Koyeo\Modules\Commands\SeedMakeCommand;
+use Koyeo\Modules\Commands\SetupCommand;
+use Koyeo\Modules\Commands\UpdateCommand;
+use Koyeo\Modules\Commands\UseCommand;
 
 class ConsoleServiceProvider extends ServiceProvider
 {

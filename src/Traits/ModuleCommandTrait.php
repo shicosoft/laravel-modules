@@ -1,6 +1,6 @@
 <?php
 
-namespace Nwidart\Modules\Traits;
+namespace Koyeo\Modules\Traits;
 
 trait ModuleCommandTrait
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Nwidart\Modules\Generators;
+namespace Koyeo\Modules\Generators;
 
 abstract class Generator
 {

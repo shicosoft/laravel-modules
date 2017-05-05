@@ -1,10 +1,10 @@
 <?php
 
-namespace Nwidart\Modules\Process;
+namespace Koyeo\Modules\Process;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
-use Nwidart\Modules\Repository;
+use Koyeo\Modules\Repository;
 use Symfony\Component\Process\Process;
 
 class Installer
@@ -26,7 +26,7 @@ class Installer
     /**
      * The module repository instance.
      *
-     * @var \Nwidart\Modules\Repository
+     * @var \Koyeo\Modules\Repository
      */
     protected $repository;
 
@@ -84,7 +84,7 @@ class Installer
     /**
      * Set the module repository instance.
      *
-     * @param \Nwidart\Modules\Repository $repository
+     * @param \Koyeo\Modules\Repository $repository
      *
      * @return $this
      */

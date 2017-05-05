@@ -1,6 +1,6 @@
 <?php
 
-namespace Nwidart\Modules\Support;
+namespace Koyeo\Modules\Support;
 
 class Stub
 {

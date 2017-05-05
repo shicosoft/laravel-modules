@@ -1,8 +1,8 @@
 <?php
 
-namespace Nwidart\Modules\tests;
+namespace Koyeo\Modules\tests;
 
-use Nwidart\Modules\Support\Migrations\SchemaParser;
+use Koyeo\Modules\Support\Migrations\SchemaParser;
 
 class SchemaParserTest extends \PHPUnit_Framework_TestCase
 {

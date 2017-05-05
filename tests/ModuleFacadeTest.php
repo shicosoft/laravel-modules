@@ -1,8 +1,8 @@
 <?php
 
-namespace Nwidart\Modules\tests;
+namespace Koyeo\Modules\tests;
 
-use Nwidart\Modules\Facades\Module;
+use Koyeo\Modules\Facades\Module;
 
 class ModuleFacadeTest extends BaseTestCase
 {

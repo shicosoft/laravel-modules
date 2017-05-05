@@ -1,11 +1,11 @@
 <?php
 
-namespace Nwidart\Modules\Commands;
+namespace Koyeo\Modules\Commands;
 
 use Illuminate\Support\Str;
-use Nwidart\Modules\Support\Stub;
-use Nwidart\Modules\Traits\CanClearModulesCache;
-use Nwidart\Modules\Traits\ModuleCommandTrait;
+use Koyeo\Modules\Support\Stub;
+use Koyeo\Modules\Traits\CanClearModulesCache;
+use Koyeo\Modules\Traits\ModuleCommandTrait;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 

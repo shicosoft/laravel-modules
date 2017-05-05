@@ -1,9 +1,9 @@
 <?php
 
-namespace Nwidart\Modules;
+namespace Koyeo\Modules;
 
 use Illuminate\Filesystem\Filesystem;
-use Nwidart\Modules\Exceptions\InvalidJsonException;
+use Koyeo\Modules\Exceptions\InvalidJsonException;
 
 class Json
 {

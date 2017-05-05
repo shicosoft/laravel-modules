@@ -1,11 +1,11 @@
 <?php
 
-namespace Nwidart\Modules\Publishing;
+namespace Koyeo\Modules\Publishing;
 
 use Illuminate\Console\Command;
-use Nwidart\Modules\Contracts\PublisherInterface;
-use Nwidart\Modules\Module;
-use Nwidart\Modules\Repository;
+use Koyeo\Modules\Contracts\PublisherInterface;
+use Koyeo\Modules\Module;
+use Koyeo\Modules\Repository;
 
 abstract class Publisher implements PublisherInterface
 {
@@ -19,7 +19,7 @@ abstract class Publisher implements PublisherInterface
     /**
      * The modules repository instance.
      *
-     * @var \Nwidart\Modules\Repository
+     * @var \Koyeo\Modules\Repository
      */
     protected $repository;
 
@@ -88,7 +88,7 @@ abstract class Publisher implements PublisherInterface
     /**
      * Get module instance.
      *
-     * @return \Nwidart\Modules\Module
+     * @return \Koyeo\Modules\Module
      */
     public function getModule()
     {
@@ -98,7 +98,7 @@ abstract class Publisher implements PublisherInterface
     /**
      * Set modules repository instance.
      *
-     * @param \Nwidart\Modules\Repository $repository
+     * @param \Koyeo\Modules\Repository $repository
      *
      * @return $this
      */
@@ -112,7 +112,7 @@ abstract class Publisher implements PublisherInterface
     /**
      * Get modules repository instance.
      *
-     * @return \Nwidart\Modules\Repository
+     * @return \Koyeo\Modules\Repository
      */
     public function getRepository()
     {

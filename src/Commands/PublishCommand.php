@@ -1,10 +1,10 @@
 <?php
 
-namespace Nwidart\Modules\Commands;
+namespace Koyeo\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Nwidart\Modules\Module;
-use Nwidart\Modules\Publishing\AssetPublisher;
+use Koyeo\Modules\Module;
+use Koyeo\Modules\Publishing\AssetPublisher;
 use Symfony\Component\Console\Input\InputArgument;
 
 class PublishCommand extends Command

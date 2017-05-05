@@ -1,8 +1,8 @@
 <?php
 
-namespace Nwidart\Modules\tests;
+namespace Koyeo\Modules\tests;
 
-use Nwidart\Modules\Support\Migrations\NameParser;
+use Koyeo\Modules\Support\Migrations\NameParser;
 
 class NameParserTest extends \PHPUnit_Framework_TestCase
 {

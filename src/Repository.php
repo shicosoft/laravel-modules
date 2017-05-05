@@ -1,15 +1,15 @@
 <?php
 
-namespace Nwidart\Modules;
+namespace Koyeo\Modules;
 
 use Countable;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Str;
 use Illuminate\Support\Traits\Macroable;
-use Nwidart\Modules\Contracts\RepositoryInterface;
-use Nwidart\Modules\Exceptions\ModuleNotFoundException;
-use Nwidart\Modules\Process\Installer;
-use Nwidart\Modules\Process\Updater;
+use Koyeo\Modules\Contracts\RepositoryInterface;
+use Koyeo\Modules\Exceptions\ModuleNotFoundException;
+use Koyeo\Modules\Process\Installer;
+use Koyeo\Modules\Process\Updater;
 
 class Repository implements RepositoryInterface, Countable
 {

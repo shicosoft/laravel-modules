@@ -1,13 +1,13 @@
 <?php
 
-namespace Nwidart\Modules\Generators;
+namespace Koyeo\Modules\Generators;
 
 use Illuminate\Config\Repository as Config;
 use Illuminate\Console\Command as Console;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Str;
-use Nwidart\Modules\Repository;
-use Nwidart\Modules\Support\Stub;
+use Koyeo\Modules\Repository;
+use Koyeo\Modules\Support\Stub;
 
 class ModuleGenerator extends Generator
 {

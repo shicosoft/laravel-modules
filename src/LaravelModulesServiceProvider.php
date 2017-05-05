@@ -1,12 +1,12 @@
 <?php
 
-namespace Nwidart\Modules;
+namespace Koyeo\Modules;
 
 use Illuminate\Support\ServiceProvider;
-use Nwidart\Modules\Providers\BootstrapServiceProvider;
-use Nwidart\Modules\Providers\ConsoleServiceProvider;
-use Nwidart\Modules\Providers\ContractsServiceProvider;
-use Nwidart\Modules\Support\Stub;
+use Koyeo\Modules\Providers\BootstrapServiceProvider;
+use Koyeo\Modules\Providers\ConsoleServiceProvider;
+use Koyeo\Modules\Providers\ContractsServiceProvider;
+use Koyeo\Modules\Support\Stub;
 
 class LaravelModulesServiceProvider extends ServiceProvider
 {

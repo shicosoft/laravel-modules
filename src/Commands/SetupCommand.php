@@ -1,6 +1,6 @@
 <?php
 
-namespace Nwidart\Modules\Commands;
+namespace Koyeo\Modules\Commands;
 
 use Illuminate\Console\Command;
 

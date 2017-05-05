@@ -1,9 +1,9 @@
 <?php
 
-namespace Nwidart\Modules\tests;
+namespace Koyeo\Modules\tests;
 
-use Nwidart\Modules\Exceptions\InvalidJsonException;
-use Nwidart\Modules\Json;
+use Koyeo\Modules\Exceptions\InvalidJsonException;
+use Koyeo\Modules\Json;
 
 class JsonTest extends BaseTestCase
 {

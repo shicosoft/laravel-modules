@@ -1,8 +1,8 @@
 <?php
 
-namespace Nwidart\Modules\tests\Commands;
+namespace Koyeo\Modules\tests\Commands;
 
-use Nwidart\Modules\tests\BaseTestCase;
+use Koyeo\Modules\tests\BaseTestCase;
 
 class GenerateJobCommandTest extends BaseTestCase
 {

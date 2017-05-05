@@ -1,8 +1,8 @@
 <?php
 
-namespace Nwidart\Modules\tests;
+namespace Koyeo\Modules\tests;
 
-use Nwidart\Modules\LaravelModulesServiceProvider;
+use Koyeo\Modules\LaravelModulesServiceProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
 abstract class BaseTestCase extends OrchestraTestCase

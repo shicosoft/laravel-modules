@@ -1,12 +1,12 @@
 <?php
 
-namespace Nwidart\Modules\tests;
+namespace Koyeo\Modules\tests;
 
 use Illuminate\Filesystem\Filesystem;
-use Nwidart\Modules\Collection;
-use Nwidart\Modules\Exceptions\ModuleNotFoundException;
-use Nwidart\Modules\Module;
-use Nwidart\Modules\Repository;
+use Koyeo\Modules\Collection;
+use Koyeo\Modules\Exceptions\ModuleNotFoundException;
+use Koyeo\Modules\Module;
+use Koyeo\Modules\Repository;
 
 class RepositoryTest extends BaseTestCase
 {

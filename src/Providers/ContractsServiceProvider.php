@@ -1,10 +1,10 @@
 <?php
 
-namespace Nwidart\Modules\Providers;
+namespace Koyeo\Modules\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Nwidart\Modules\Contracts\RepositoryInterface;
-use Nwidart\Modules\Repository;
+use Koyeo\Modules\Contracts\RepositoryInterface;
+use Koyeo\Modules\Repository;
 
 class ContractsServiceProvider extends ServiceProvider
 {

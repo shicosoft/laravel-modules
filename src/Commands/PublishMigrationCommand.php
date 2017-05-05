@@ -1,10 +1,10 @@
 <?php
 
-namespace Nwidart\Modules\Commands;
+namespace Koyeo\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Nwidart\Modules\Migrations\Migrator;
-use Nwidart\Modules\Publishing\MigrationPublisher;
+use Koyeo\Modules\Migrations\Migrator;
+use Koyeo\Modules\Publishing\MigrationPublisher;
 use Symfony\Component\Console\Input\InputArgument;
 
 class PublishMigrationCommand extends Command
@@ -46,7 +46,7 @@ class PublishMigrationCommand extends Command
     /**
      * Publish migration for the specified module.
      *
-     * @param \Nwidart\Modules\Module $module
+     * @param \Koyeo\Modules\Module $module
      */
     public function publish($module)
     {

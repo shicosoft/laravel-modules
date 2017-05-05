@@ -1,6 +1,6 @@
 <?php
 
-namespace Nwidart\Modules\Publishing;
+namespace Koyeo\Modules\Publishing;
 
 class LangPublisher extends Publisher
 {

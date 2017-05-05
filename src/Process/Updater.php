@@ -1,8 +1,8 @@
 <?php
 
-namespace Nwidart\Modules\Process;
+namespace Koyeo\Modules\Process;
 
-use Nwidart\Modules\Module;
+use Koyeo\Modules\Module;
 
 class Updater extends Runner
 {

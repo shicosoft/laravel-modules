@@ -1,16 +1,16 @@
 <?php
 
-namespace Nwidart\Modules\Migrations;
+namespace Koyeo\Modules\Migrations;
 
 use Illuminate\Support\Collection;
-use Nwidart\Modules\Module;
+use Koyeo\Modules\Module;
 
 class Migrator
 {
     /**
      * Pingpong Module instance.
      *
-     * @var \Nwidart\Modules\Module
+     * @var \Koyeo\Modules\Module
      */
     protected $module;
 
@@ -31,7 +31,7 @@ class Migrator
     /**
      * Create new instance.
      *
-     * @param \Nwidart\Modules\Module $module
+     * @param \Koyeo\Modules\Module $module
      */
     public function __construct(Module $module)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Nwidart\Modules\Contracts;
+namespace Koyeo\Modules\Contracts;
 
 interface RepositoryInterface
 {
@@ -28,7 +28,7 @@ interface RepositoryInterface
     /**
      * Get modules as modules collection instance.
      *
-     * @return \Nwidart\Modules\Collection
+     * @return \Koyeo\Modules\Collection
      */
     public function toCollection();
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace Nwidart\Modules\Commands;
+namespace Koyeo\Modules\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
-use Nwidart\Modules\Module;
-use Nwidart\Modules\Repository;
-use Nwidart\Modules\Traits\ModuleCommandTrait;
+use Koyeo\Modules\Module;
+use Koyeo\Modules\Repository;
+use Koyeo\Modules\Traits\ModuleCommandTrait;
 use RuntimeException;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;

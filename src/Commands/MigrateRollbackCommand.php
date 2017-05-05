@@ -1,10 +1,10 @@
 <?php
 
-namespace Nwidart\Modules\Commands;
+namespace Koyeo\Modules\Commands;
 
 use Illuminate\Console\Command;
-use Nwidart\Modules\Migrations\Migrator;
-use Nwidart\Modules\Traits\MigrationLoaderTrait;
+use Koyeo\Modules\Migrations\Migrator;
+use Koyeo\Modules\Traits\MigrationLoaderTrait;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -27,7 +27,7 @@ class MigrateRollbackCommand extends Command
     protected $description = 'Rollback the modules migrations.';
 
     /**
-     * @var \Nwidart\Modules\Repository
+     * @var \Koyeo\Modules\Repository
      */
     protected $module;
 

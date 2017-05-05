@@ -1,8 +1,8 @@
 <?php
 
-namespace Nwidart\Modules\Publishing;
+namespace Koyeo\Modules\Publishing;
 
-use Nwidart\Modules\Migrations\Migrator;
+use Koyeo\Modules\Migrations\Migrator;
 
 class MigrationPublisher extends AssetPublisher
 {

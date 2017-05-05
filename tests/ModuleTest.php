@@ -1,9 +1,9 @@
 <?php
 
-namespace Nwidart\Modules\tests;
+namespace Koyeo\Modules\tests;
 
-use Nwidart\Modules\Json;
-use Nwidart\Modules\Module;
+use Koyeo\Modules\Json;
+use Koyeo\Modules\Module;
 
 class ModuleTest extends BaseTestCase
 {

@@ -1,23 +1,23 @@
 <?php
 
-namespace Nwidart\Modules\Process;
+namespace Koyeo\Modules\Process;
 
-use Nwidart\Modules\Contracts\RunableInterface;
-use Nwidart\Modules\Repository;
+use Koyeo\Modules\Contracts\RunableInterface;
+use Koyeo\Modules\Repository;
 
 class Runner implements RunableInterface
 {
     /**
      * The module instance.
      *
-     * @var \Nwidart\Modules\Repository
+     * @var \Koyeo\Modules\Repository
      */
     protected $module;
 
     /**
      * The constructor.
      *
-     * @param \Nwidart\Modules\Repository $module
+     * @param \Koyeo\Modules\Repository $module
      */
     public function __construct(Repository $module)
     {

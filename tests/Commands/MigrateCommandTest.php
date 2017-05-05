@@ -1,10 +1,10 @@
 <?php
 
-namespace Nwidart\Modules\tests\Commands;
+namespace Koyeo\Modules\tests\Commands;
 
 use Illuminate\Support\Facades\Schema;
-use Nwidart\Modules\Repository;
-use Nwidart\Modules\Tests\BaseTestCase;
+use Koyeo\Modules\Repository;
+use Koyeo\Modules\Tests\BaseTestCase;
 
 abstract class MigrateCommandTest extends BaseTestCase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Nwidart\Modules;
+namespace Koyeo\Modules;
 
 use Illuminate\Filesystem\Filesystem;
 use Symfony\Component\Finder\Finder;

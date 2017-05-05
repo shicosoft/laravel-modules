@@ -1,8 +1,8 @@
 <?php
 
-namespace Nwidart\Modules\tests\Commands;
+namespace Koyeo\Modules\tests\Commands;
 
-use Nwidart\Modules\Tests\BaseTestCase;
+use Koyeo\Modules\Tests\BaseTestCase;
 
 class ControllerCommandTest extends BaseTestCase
 {
