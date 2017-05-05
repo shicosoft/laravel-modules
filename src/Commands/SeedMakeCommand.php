@@ -95,7 +95,7 @@ class SeedMakeCommand extends GeneratorCommand
      */
     private function getSeederName()
     {
-        $end = $this->option('master') ? 'DatabaseSeeder' : 'TableSeeder';
+        $end = $this->option('master') ? 'Seeder' : 'TableSeeder';
 
         return Str::studly($this->argument('name')) . $end;
     }

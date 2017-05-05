@@ -24,11 +24,19 @@ class Module extends ServiceProvider
     protected $name;
 
     /**
-     * The module path,.
+     * The module path.
      *
      * @var string
      */
     protected $path;
+
+
+    /**
+     * The module bootstrap kernel.
+     *
+     * @var array
+     */
+    protected $bootstrap;
 
     /**
      * The constructor.
@@ -42,6 +50,7 @@ class Module extends ServiceProvider
         $this->app = $app;
         $this->name = $name;
         $this->path = realpath($path);
+        $this->bootstrap = $this->getBootstrapKernel();
     }
 
     /**
@@ -62,6 +71,17 @@ class Module extends ServiceProvider
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Get the module bootstrap kernel object;
+     */
+    public function getBootstrapKernel()
+    {
+
+        $kernel = "Modules\\$this->name\\Bootstrap\\Kernel";
+
+        return new $kernel;
     }
 
     /**
@@ -154,6 +174,7 @@ class Module extends ServiceProvider
     public function boot()
     {
         if (config('modules.register.translations', true) === true) {
+
             $this->registerTranslation();
         }
 
@@ -172,6 +193,7 @@ class Module extends ServiceProvider
         $langPath = $this->getPath() . "/Resources/lang";
 
         if (is_dir($langPath)) {
+
             $this->loadTranslationsFrom($langPath, $lowerName);
         }
     }
@@ -246,9 +268,14 @@ class Module extends ServiceProvider
     protected function registerAliases()
     {
         $loader = AliasLoader::getInstance();
-        foreach ($this->get('aliases', []) as $aliasName => $aliasClass) {
-            $loader->alias($aliasName, $aliasClass);
+
+        if (isset($this->bootstrap->aliases)) {
+
+            foreach ($this->bootstrap->aliases as $aliasName => $aliasClass) {
+                $loader->alias($aliasName, $aliasClass);
+            }
         }
+
     }
 
     /**
@@ -256,8 +283,12 @@ class Module extends ServiceProvider
      */
     protected function registerProviders()
     {
-        foreach ($this->get('providers', []) as $provider) {
-            $this->app->register($provider);
+        if (isset($this->bootstrap->providers)) {
+
+            foreach ($this->bootstrap->providers as $provider) {
+
+                $this->app->register($provider);
+            }
         }
     }
 
@@ -266,8 +297,12 @@ class Module extends ServiceProvider
      */
     protected function registerFiles()
     {
-        foreach ($this->get('files', []) as $file) {
-            include $this->path . '/' . $file;
+        if (isset($this->bootstrap->files)) {
+
+            foreach ($this->bootstrap->files as $file) {
+
+                include $this->path . '/' . $file;
+            }
         }
     }
 

@@ -51,9 +51,11 @@ class LaravelModulesServiceProvider extends ServiceProvider
     public function setupStubPath()
     {
         $this->app->booted(function ($app) {
+
             Stub::setBasePath(__DIR__ . '/Commands/stubs');
 
             if ($app['modules']->config('stubs.enabled') === true) {
+
                 Stub::setBasePath($app['modules']->config('stubs.path'));
             }
         });
@@ -65,10 +67,10 @@ class LaravelModulesServiceProvider extends ServiceProvider
     protected function registerNamespaces()
     {
         $configPath = __DIR__ . '/../config/config.php';
+
         $this->mergeConfigFrom($configPath, 'modules');
-        $this->publishes([
-            $configPath => config_path('modules.php'),
-        ], 'config');
+
+        $this->publishes([$configPath => config_path('modules.php'),], 'config');
     }
 
     /**
@@ -77,6 +79,7 @@ class LaravelModulesServiceProvider extends ServiceProvider
     protected function registerServices()
     {
         $this->app->singleton('modules', function ($app) {
+
             $path = $app['config']->get('modules.paths.modules');
 
             return new Repository($app, $path);

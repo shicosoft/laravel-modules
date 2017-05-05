@@ -24,14 +24,17 @@ return [
 
     'stubs' => [
         'enabled' => false,
-        'path' => base_path() . '/vendor/nwidart/laravel-modules/src/Commands/stubs',
+        'path' => base_path() . '/vendor/koyeo/laravel-modules/src/Commands/stubs',
         'files' => [
             'start' => 'start.php',
+            'deploy' => 'deploy.php',
+            'bootstrap-kernel' => 'Bootstrap/Kernel.php',
             'routes' => 'Http/routes.php',
             'json' => 'module.json',
             'views/index' => 'Resources/views/index.blade.php',
             'views/master' => 'Resources/views/layouts/master.blade.php',
             'scaffold/config' => 'Config/config.php',
+            'scaffold/permissions' => 'Config/permissions.php',
             'composer' => 'composer.json',
         ],
         'replacements' => [
@@ -95,6 +98,7 @@ return [
 
         'generator' => [
             'assets' => 'Assets',
+            'bootstrap' => 'Bootstrap',
             'config' => 'Config',
             'command' => 'Console',
             'event' => 'Events',
@@ -141,10 +145,10 @@ return [
     */
 
     'composer' => [
-        'vendor' => 'nwidart',
+        'vendor' => 'eevee',
         'author' => [
-            'name' => 'Nicolas Widart',
-            'email' => 'n.widart@gmail.com',
+            'name' => '',
+            'email' => '',
         ],
     ],
     /*

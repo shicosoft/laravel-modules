@@ -1,0 +1,103 @@
+<?php
+
+namespace Modules\$MODULE$\Bootstrap;
+
+use Illuminate\Console\Scheduling\Schedule;
+
+class Kernel
+{
+    /*
+    |--------------------------------------------------------------------------
+    | Auto loaded module files
+    |--------------------------------------------------------------------------
+    |
+    */
+    public $files = [];
+
+    /*
+    |--------------------------------------------------------------------------
+    | Auto loaded Service Providers
+    |--------------------------------------------------------------------------
+    |
+    | The service providers listed here will be automatically loaded on the
+    | request to your application. Feel free to add your own services to
+    | this array to grant expanded functionality to your applications.
+    |
+    */
+    public $providers = [
+        \Modules\$MODULE$\Providers\$MODULE$ServiceProvider::class,
+    ];
+
+    /*
+    |--------------------------------------------------------------------------
+    | Class Aliases
+    |--------------------------------------------------------------------------
+    |
+    | This array of class aliases will be registered when this application
+    | is started. However, feel free to register as many as you wish as
+    | the aliases are "lazy" loaded so they don't hinder performance.
+    |
+    */
+    public $aliases = [
+
+    ];
+
+    /*
+    |--------------------------------------------------------------------------
+    | The Artisan commands provided by your module
+    |--------------------------------------------------------------------------
+    |
+    */
+    public $commands = [];
+
+    /*
+    |--------------------------------------------------------------------------
+    | Define the application's command schedule
+    |--------------------------------------------------------------------------
+    |
+    */
+    public function schedule(Schedule $schedule)
+    {
+        // $schedule->command('inspire')->hourly();
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Register the Closure based commands for the module
+    |--------------------------------------------------------------------------
+    |
+    */
+    public function commands()
+    {
+
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | The application's global HTTP middleware stack
+    |--------------------------------------------------------------------------
+    |
+    | These middleware are run during every request to your application.
+    |
+    */
+    public $middleware = [];
+
+    /*
+    |--------------------------------------------------------------------------
+    | The application's route middleware groups
+    |--------------------------------------------------------------------------
+    |
+    */
+    public $middlewareGroups = [];
+
+    /*
+    |--------------------------------------------------------------------------
+    | The application's route middleware
+    |--------------------------------------------------------------------------
+    |
+    | These middleware may be assigned to groups or used individually
+    |
+    */
+    public $routeMiddleware = [];
+
+}

@@ -65,9 +65,9 @@ class ModuleGenerator extends Generator
      *
      * @param $name
      * @param Repository $module
-     * @param Config     $config
+     * @param Config $config
      * @param Filesystem $filesystem
-     * @param Console    $console
+     * @param Console $console
      */
     public function __construct(
         $name,
@@ -75,7 +75,8 @@ class ModuleGenerator extends Generator
         Config $config = null,
         Filesystem $filesystem = null,
         Console $console = null
-    ) {
+    )
+    {
         $this->name = $name;
         $this->config = $config;
         $this->filesystem = $filesystem;
@@ -313,7 +314,13 @@ class ModuleGenerator extends Generator
     public function generateResources()
     {
         $this->console->call('module:make-seed', [
-            'name' => $this->getName(),
+            'name' => 'Deploy',
+            'module' => $this->getName(),
+            '--master' => true,
+        ]);
+
+        $this->console->call('module:make-seed', [
+            'name' => 'Test',
             'module' => $this->getName(),
             '--master' => true,
         ]);
@@ -335,15 +342,17 @@ class ModuleGenerator extends Generator
      *
      * @param $stub
      *
-     * @return Stub
+     * @return string
      */
     protected function getStubContents($stub)
     {
-        return (new Stub(
-            '/' . $stub . '.stub',
-            $this->getReplacement($stub))
-        )->render();
+        $params = array_merge($this->getReplacement($stub), [
+            'MODULE' => $this->getName(),
+        ]);
+
+        return (new Stub('/' . $stub . '.stub', $params))->render();
     }
+
 
     /**
      * get the list for the replacements.

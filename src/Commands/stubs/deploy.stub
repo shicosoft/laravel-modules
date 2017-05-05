@@ -1,0 +1,15 @@
+<?php
+
+return [
+
+    'resources' => config('core.resources'),
+
+    'permissions' => config('core.permissions'),
+
+    'roles' => config('core.roles'),
+
+    'seeder' => [
+        \Modules\Core\Database\Seeders\DeployTableSeeder::class,
+    ]
+
+];

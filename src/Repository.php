@@ -141,6 +141,7 @@ class Repository implements RepositoryInterface, Countable
     public function all()
     {
         if (!$this->config('cache.enabled')) {
+
             return $this->scan();
         }
 
@@ -175,6 +176,7 @@ class Repository implements RepositoryInterface, Countable
     public function getCached()
     {
         return $this->app['cache']->remember($this->config('cache.key'), $this->config('cache.lifetime'), function () {
+
             return $this->toCollection()->toArray();
         });
     }
@@ -303,6 +305,7 @@ class Repository implements RepositoryInterface, Countable
     public function boot()
     {
         foreach ($this->getOrdered() as $module) {
+
             $module->boot();
         }
     }
