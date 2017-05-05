@@ -26,7 +26,7 @@ return [
         'enabled' => false,
         'path' => base_path() . '/vendor/koyeo/laravel-modules/src/Commands/stubs',
         'files' => [
-            'start' => 'start.php',
+            // 'start' => 'start.php',
             'deploy' => 'deploy.php',
             'bootstrap-kernel' => 'Bootstrap/Kernel.php',
             'routes' => 'Http/routes.php',

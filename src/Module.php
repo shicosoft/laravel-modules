@@ -243,6 +243,8 @@ class Module extends ServiceProvider
      */
     public function register()
     {
+        $this->registerRoutes();
+
         $this->registerAliases();
 
         $this->registerProviders();
@@ -260,6 +262,17 @@ class Module extends ServiceProvider
     protected function fireEvent($event)
     {
         $this->app['events']->fire(sprintf('modules.%s.' . $event, $this->getLowerName()), [$this]);
+    }
+
+    /**
+     * Register the module routes.
+     */
+    protected function registerRoutes()
+    {
+        if (!app()->routesAreCached()) {
+
+            require $this->path . '/Http/routes.php';
+        }
     }
 
     /**
