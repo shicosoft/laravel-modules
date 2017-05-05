@@ -243,13 +243,15 @@ class Module extends ServiceProvider
      */
     public function register()
     {
-        $this->registerRoutes();
-
-        $this->registerAliases();
+        $this->registerFiles();
 
         $this->registerProviders();
 
-        $this->registerFiles();
+        $this->registerAliases();
+
+        $this->registerRoutes();
+
+        $this->registerCommands();
 
         $this->fireEvent('register');
     }
@@ -317,6 +319,25 @@ class Module extends ServiceProvider
                 include $this->path . '/' . $file;
             }
         }
+    }
+
+    /**
+     * Register the module commands.
+     */
+    protected function registerCommands()
+    {
+
+        $console = $this->app->make('Illuminate\Contracts\Console\Kernel');
+
+        if (isset($this->bootstrap->commands)) {
+
+            foreach ($this->bootstrap->commands as $command) {
+
+                $console->addCommand($command);
+            }
+        }
+
+
     }
 
     /**
