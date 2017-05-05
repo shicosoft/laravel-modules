@@ -326,7 +326,6 @@ class Module extends ServiceProvider
      */
     protected function registerCommands()
     {
-
         $console = $this->app->make('Illuminate\Contracts\Console\Kernel');
 
         if (isset($this->bootstrap->commands)) {
@@ -335,6 +334,20 @@ class Module extends ServiceProvider
 
                 $console->addCommand($command);
             }
+        }
+
+        if (method_exists($this->bootstrap, 'schedule')) {
+
+            $this->bootstrap->schedule($this->app->make('Illuminate\Console\Scheduling\Schedule'));
+        }
+
+
+        if (method_exists($this->bootstrap, 'commands')) {
+
+            $console->addCommandClosures(function () {
+
+                $this->bootstrap->commands();
+            });
         }
 
 
