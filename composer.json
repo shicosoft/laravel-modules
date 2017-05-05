@@ -11,6 +11,12 @@
   "license": "MIT",
   "authors": [
     {
+      "name": "koyeo",
+      "email": "im@koyeo.io",
+      "homepage": "https://koyeo.io",
+      "role": "Developer"
+    },
+    {
       "name": "Nicolas Widart",
       "email": "n.widart@gmail.com",
       "homepage": "https://nicolaswidart.com",
@@ -30,12 +36,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Nwidart\\Modules\\": "src"
+      "Koyeo\\Modules\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Nwidart\\Modules\\Tests\\": "tests"
+      "Koyeo\\Modules\\Tests\\": "tests"
     }
   },
   "minimum-stability": "dev",
