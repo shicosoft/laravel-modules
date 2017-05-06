@@ -17,11 +17,18 @@ class LaravelModulesServiceProvider extends ServiceProvider
      */
     protected $defer = false;
 
+
+    public function __construct(\Illuminate\Foundation\Application $app)
+    {
+        parent::__construct($app);
+    }
+
     /**
      * Booting the package.
      */
     public function boot()
     {
+
         $this->registerNamespaces();
 
         $this->registerModules();

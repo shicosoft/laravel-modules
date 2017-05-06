@@ -173,6 +173,7 @@ class Module extends ServiceProvider
      */
     public function boot()
     {
+
         if (config('modules.register.translations', true) === true) {
 
             $this->registerTranslation();
@@ -249,9 +250,11 @@ class Module extends ServiceProvider
 
         $this->registerAliases();
 
-        $this->registerRoutes();
+        $this->registerMiddlewares();
 
         $this->registerCommands();
+
+        $this->registerRoutes();
 
         $this->fireEvent('register');
     }
@@ -326,13 +329,13 @@ class Module extends ServiceProvider
      */
     protected function registerCommands()
     {
-        $console = $this->app->make('Illuminate\Contracts\Console\Kernel');
+        $kernel = $this->app->make('Illuminate\Contracts\Console\Kernel');
 
         if (isset($this->bootstrap->commands)) {
 
             foreach ($this->bootstrap->commands as $command) {
 
-                $console->addCommand($command);
+                $kernel->addCommand($command);
             }
         }
 
@@ -344,14 +347,51 @@ class Module extends ServiceProvider
 
         if (method_exists($this->bootstrap, 'commands')) {
 
-            $console->addCommandClosures(function () {
+            $kernel->addCommandClosures(function () {
 
                 $this->bootstrap->commands();
             });
         }
 
+    }
+
+    /**
+     * Register module middlewares.
+     */
+    protected function registerMiddlewares()
+    {
+
+        $kernel = $this->app->make('Illuminate\Contracts\Http\Kernel');
+
+        if (isset($this->bootstrap->middleware)) {
+
+            foreach ($this->bootstrap->middleware as $middleware) {
+
+                $kernel->addMiddleware($middleware);
+            }
+        }
+
+
+        if (isset($this->bootstrap->middlewareGroups)) {
+
+            foreach ($this->bootstrap->middlewareGroups as $alias => $middleware) {
+
+                $kernel->addMiddlewareGroups($alias, $middleware);
+            }
+
+        }
+
+
+        if (isset($this->bootstrap->routeMiddleware)) {
+
+            $kernel->addRouteMiddlewares($this->bootstrap->routeMiddleware);
+        }
+
+        $kernel->RegisterMiddlewares();
+
 
     }
+
 
     /**
      * Handle call __toString.
